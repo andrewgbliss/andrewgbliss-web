@@ -53,7 +53,7 @@ const parseText = (text: string): ParseTextReturn => {
       message: ls_message,
     };
   } else if (parts[0] === "show") {
-    const name = parts[1] || "";
+    const name = parts[1] ?? "";
     const app = apps.find((g) => g.name === name);
     if (!app) {
       return {
