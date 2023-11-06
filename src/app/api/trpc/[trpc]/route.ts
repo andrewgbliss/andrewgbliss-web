@@ -5,10 +5,7 @@ import { env } from "~/env.mjs";
 import { appRouter } from "~/server/api/root";
 import { createTRPCContext } from "~/server/api/trpc";
 
-export const config = {
-  runtime: "edge",
-  region: "fra1",
-};
+export const runtime = "edge";
 
 const handler = (req: NextRequest) =>
   fetchRequestHandler({
