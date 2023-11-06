@@ -1,8 +1,9 @@
 import { CommandPrompt } from "./_components/command-prompt";
 import { promises as fs } from "fs";
+import path from "path";
 
 export default async function Page() {
-  // const file = await fs.readFile(process.cwd() + "/lib/logo.txt", "utf8");
-  const file = await fs.readdir(process.cwd());
-  return <CommandPrompt logo={file.join(",")} />;
+  const file = path.join(process.cwd(), "lib", "logo.txt");
+  const logo = await fs.readFile(file, "utf8");
+  return <CommandPrompt logo={logo} />;
 }
