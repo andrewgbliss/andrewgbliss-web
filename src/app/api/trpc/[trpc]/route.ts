@@ -5,6 +5,11 @@ import { env } from "~/env.mjs";
 import { appRouter } from "~/server/api/root";
 import { createTRPCContext } from "~/server/api/trpc";
 
+export const config = {
+  runtime: "edge",
+  region: "fra1",
+};
+
 const handler = (req: NextRequest) =>
   fetchRequestHandler({
     endpoint: "/api/trpc",
@@ -15,7 +20,7 @@ const handler = (req: NextRequest) =>
       env.NODE_ENV === "development"
         ? ({ path, error }) => {
             console.error(
-              `❌ tRPC failed on ${path ?? "<no-path>"}: ${error.message}`
+              `❌ tRPC failed on ${path ?? "<no-path>"}: ${error.message}`,
             );
           }
         : undefined,
