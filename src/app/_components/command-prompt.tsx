@@ -23,6 +23,10 @@ const apps: App[] = [
     name: "t3-stack",
     href: "/t3-stack",
   },
+  {
+    name: "hero",
+    href: "/hero",
+  },
 ];
 
 const ls_message = `Apps:
@@ -137,7 +141,10 @@ export const CommandPrompt: React.FC<Props> = ({ logo }) => {
     setText([...text, { text: value }]);
   };
   return (
-    <div className="h-screen w-screen bg-black text-green-500">
+    <div
+      style={{ fontFamily: "DOS" }}
+      className="h-screen w-screen bg-black text-green-500"
+    >
       <div className="p-5">
         <div className="hidden sm:block">
           <pre>{logo}</pre>
