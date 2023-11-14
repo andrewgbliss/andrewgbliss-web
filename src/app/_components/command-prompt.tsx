@@ -4,10 +4,9 @@ import React, { useEffect, useRef, useState } from "react";
 
 const line_divider = "--------------------------";
 
-const initial_message = `Welcome to my website. Type "exit" to return to Google. Type "help" for a list of commands.`;
+const initial_message = `Welcome to my website. You are about to become a hacker. Type "help" for a list of commands.`;
 
 const help_message = `Commands:
-exit -------- Exits back to Google
 help -------- Show this help command
 ls ---------- Shows my complete portfolio of apps to view
 show {app} -- Shows the app called {app}
@@ -27,6 +26,10 @@ const apps: App[] = [
     name: "hero",
     href: "/hero",
   },
+  {
+    name: "authentication",
+    href: "/authentication",
+  },
 ];
 
 const ls_message = `Apps:
@@ -41,12 +44,7 @@ type ParseTextReturn = {
 
 const parseText = (text: string): ParseTextReturn => {
   const parts = text.split(" ");
-  if (parts[0] === "exit") {
-    return {
-      type: "href",
-      message: "/",
-    };
-  } else if (parts[0] === "help") {
+  if (parts[0] === "help") {
     return {
       type: "message",
       message: help_message,
@@ -77,6 +75,17 @@ const parseText = (text: string): ParseTextReturn => {
   };
 };
 
+const parseTab = (
+  text: string,
+): { command: string; message: string } | undefined => {
+  const parts = text.split(" ");
+  if (parts[0] === "show") {
+    const name = parts[1] ?? "";
+    const app = apps.find((g) => g.name.startsWith(name));
+    return { command: "show", message: app?.name ?? name };
+  }
+};
+
 type Text = {
   text: string;
 };
@@ -91,6 +100,15 @@ const CommandPromptInput: React.FC<CommandPromptInputProps> = ({ onEnter }) => {
     setText(e.target.value);
   };
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // if key is tab
+    if (e.key === "Tab") {
+      e.preventDefault();
+      const results = parseTab(text.trim());
+      if (results) {
+        setText(results.command + " " + results.message);
+      }
+      return;
+    }
     if (e.key === "Enter") {
       const message = parseText(text.trim());
       if (message.type === "href") {
