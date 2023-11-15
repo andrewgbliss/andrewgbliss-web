@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-// import Image from "next/image";
 import Link from "next/link";
-
 import { cn } from "~/lib/utils";
 import { buttonVariants } from "~/components/ui/button";
 import { UserAuthForm } from "~/app/authentication/components/user-auth-form";
-import { Suspense } from "react";
+import { ModeToggle } from "~/components/mode-toggle";
 
 export const metadata: Metadata = {
   title: "Authentication",
@@ -15,23 +13,7 @@ export const metadata: Metadata = {
 export default function AuthenticationPage() {
   return (
     <>
-      <div className="md:hidden">
-        {/* <Image
-          src="/examples/authentication-light.png"
-          width={1280}
-          height={843}
-          alt="Authentication"
-          className="block dark:hidden"
-        />
-        <Image
-          src="/examples/authentication-dark.png"
-          width={1280}
-          height={843}
-          alt="Authentication"
-          className="hidden dark:block"
-        /> */}
-      </div>
-      <div className="container relative hidden h-full flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+      <div className="container relative h-full flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
         <Link
           href="/authentication"
           className={cn(
@@ -41,8 +23,12 @@ export default function AuthenticationPage() {
         >
           Login
         </Link>
-        <div className="bg-muted relative hidden h-full flex-col p-10 text-white dark:border-r lg:flex">
-          <div className="absolute inset-0 bg-zinc-900" />
+        <div
+          className="relative h-full flex-col p-10 text-white dark:border-r lg:flex"
+          style={{
+            backgroundImage: 'url("/img/work-dark.webp")',
+          }}
+        >
           <div className="relative z-20 flex items-center text-lg font-medium">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +46,7 @@ export default function AuthenticationPage() {
           </div>
           <div className="relative z-20 mt-auto">
             <blockquote className="space-y-2">
-              <p className="text-lg">
+              <p className="text-xl font-bold">
                 &ldquo;This library has saved me countless hours of work and
                 helped me deliver stunning designs to my clients faster than
                 ever before.&rdquo;
@@ -79,9 +65,7 @@ export default function AuthenticationPage() {
                 Enter your email below to create your account
               </p>
             </div>
-            <Suspense>
-              <UserAuthForm />
-            </Suspense>
+            <UserAuthForm />
             <p className="text-muted-foreground px-8 text-center text-sm">
               By clicking continue, you agree to our{" "}
               <Link
@@ -99,6 +83,9 @@ export default function AuthenticationPage() {
               </Link>
               .
             </p>
+            <div className="text-center">
+              <ModeToggle />
+            </div>
           </div>
         </div>
       </div>

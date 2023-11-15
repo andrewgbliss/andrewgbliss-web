@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 import { cookies } from "next/headers";
 import { TRPCReactProvider } from "~/trpc/react";
+import { ThemeProvider } from "~/components/theme-provider";
 
 export const metadata = {
   title: "Andrew G Bliss",
@@ -17,7 +18,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <TRPCReactProvider cookies={cookies().toString()}>
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </TRPCReactProvider>
       </body>
     </html>
