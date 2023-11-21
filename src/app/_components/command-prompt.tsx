@@ -10,6 +10,7 @@ const help_message = `Commands:
 help -------- Show this help command
 ls ---------- Shows my complete portfolio of apps to view
 show {app} -- Shows the app called {app}
+clear ------- Clears the screen
 `;
 
 type App = {
@@ -18,6 +19,18 @@ type App = {
 };
 
 const apps: App[] = [
+  {
+    name: "zero",
+    href: "https://www.zerofallstudios.com",
+  },
+  {
+    name: "abybyo",
+    href: "https://www.abybyo.com",
+  },
+  {
+    name: "t3-stack",
+    href: "/t3-stack",
+  },
   {
     name: "t3-stack",
     href: "/t3-stack",
@@ -53,6 +66,11 @@ const parseText = (text: string): ParseTextReturn => {
     return {
       type: "message",
       message: ls_message,
+    };
+  } else if (parts[0] === "clear") {
+    return {
+      type: "message",
+      message: "clear",
     };
   } else if (parts[0] === "show") {
     const name = parts[1] ?? "";
@@ -92,9 +110,13 @@ type Text = {
 
 type CommandPromptInputProps = {
   onEnter: (text: string) => void;
+  clearText: () => void;
 };
 
-const CommandPromptInput: React.FC<CommandPromptInputProps> = ({ onEnter }) => {
+const CommandPromptInput: React.FC<CommandPromptInputProps> = ({
+  onEnter,
+  clearText,
+}) => {
   const [text, setText] = useState("");
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
@@ -111,7 +133,12 @@ const CommandPromptInput: React.FC<CommandPromptInputProps> = ({ onEnter }) => {
     }
     if (e.key === "Enter") {
       const message = parseText(text.trim());
-      if (message.type === "href") {
+      console.log(message);
+      if (message.type === "message" && message.message === "clear") {
+        clearText();
+        setText("");
+        return;
+      } else if (message.type === "href") {
         if (message?.target === "blank") {
           window.open(message.message, "_blank");
           onEnter("Opened window");
@@ -158,6 +185,10 @@ export const CommandPrompt: React.FC<Props> = ({ logo }) => {
   const handleOnEnter = (value: string) => {
     setText([...text, { text: value }]);
   };
+  const clearText = () => {
+    console.log("clearing text");
+    setText([{ text: initial_message }]);
+  };
   return (
     <div
       style={{ fontFamily: "DOS" }}
@@ -182,7 +213,7 @@ export const CommandPrompt: React.FC<Props> = ({ logo }) => {
           );
         })}
         <div>
-          <CommandPromptInput onEnter={handleOnEnter} />
+          <CommandPromptInput onEnter={handleOnEnter} clearText={clearText} />
         </div>
       </div>
     </div>
