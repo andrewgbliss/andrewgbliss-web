@@ -43,6 +43,10 @@ const apps: App[] = [
     name: "authentication",
     href: "/authentication",
   },
+  {
+    name: "newsletter",
+    href: "/newsletter",
+  },
 ];
 
 const ls_message = `Apps:
