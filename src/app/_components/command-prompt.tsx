@@ -16,6 +16,7 @@ clear ------- Clears the screen
 type App = {
   name: string;
   href: string;
+  show?: boolean;
 };
 
 const apps: App[] = [
@@ -47,10 +48,32 @@ const apps: App[] = [
     name: "newsletter",
     href: "/newsletter",
   },
+  {
+    name: "flash-cards",
+    href: "/flash-cards",
+  },
+  {
+    name: "register",
+    href: "/register",
+  },
+  {
+    name: "memories",
+    href: "/memories",
+    show: false,
+  },
+  {
+    name: "resume",
+    href: "/resume",
+    show: false,
+  },
 ];
 
 const ls_message = `Apps:
-${apps.map((g) => g.name).join("\n")}
+${apps
+  .filter((g) => g.show !== false)
+  .map((g) => g.name)
+  .sort()
+  .join("\n")}
 `;
 
 type ParseTextReturn = {
