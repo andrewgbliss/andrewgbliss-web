@@ -64,7 +64,10 @@ const apps: App[] = [
   {
     name: "resume",
     href: "/resume",
-    show: false,
+  },
+  {
+    name: "pricing",
+    href: "/pricing",
   },
 ];
 

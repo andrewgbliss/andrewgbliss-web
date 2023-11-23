@@ -3,7 +3,7 @@ import { Input } from "~/components/ui/input";
 import { Button } from "~/components/ui/button";
 import { HeroLinks } from "~/components/hero-links";
 
-export default function HeroComponent() {
+export default function Page() {
   return (
     <section
       className="relative h-screen bg-cover bg-no-repeat"
