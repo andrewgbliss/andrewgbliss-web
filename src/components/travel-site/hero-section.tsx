@@ -1,7 +1,5 @@
 import { TopBar } from "~/components/travel-site/top-bar";
-import { H1 } from "../ui/h1";
 import { TravelSearchForm } from "./travel-search-form";
-import { Tagline } from "../ui/tagline";
 import type { WebsiteOptions } from "./types";
 
 export function HeroSection({ options }: { options: WebsiteOptions }) {
@@ -16,8 +14,10 @@ export function HeroSection({ options }: { options: WebsiteOptions }) {
         <TopBar options={options} />
       </header>
       <div className="relative z-10 flex h-full flex-col items-center justify-center space-y-6 px-4 sm:px-6 lg:px-8">
-        <H1>{options.website_name}</H1>
-        <Tagline>{options.tagline}</Tagline>
+        <h1 className="hidden font-bold text-black dark:text-white sm:block sm:text-6xl">
+          {options.website_name}
+        </h1>
+        <p className="text-center text-3xl text-white">{options.tagline}</p>
         <TravelSearchForm />
       </div>
     </section>

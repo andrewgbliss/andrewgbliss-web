@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
 
+"use client";
+
 import { useEffect, useState, useRef } from "react";
 import { Transition } from "@headlessui/react";
 import useTriggerOnScroll from "~/hooks/useTriggerOnScroll";

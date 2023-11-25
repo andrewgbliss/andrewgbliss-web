@@ -1,19 +1,20 @@
-import { TravelSite } from "~/components/travel-site/travel-site";
-import type { WebsiteOptions } from "~/components/travel-site/types";
+import { PortfolioSite } from "~/components/portfolio/portfolio";
+import type { WebsiteOptions } from "~/components/portfolio/types";
 
 const options: WebsiteOptions = {
   logo: {
     img_src: "/img/travel-logo.webp",
-    website_name: "Travel Explorer",
+    website_name: "Andrew G Bliss",
   },
-  website_name: "Travel Explorer",
-  background_cover_url: "/img/travel-hero-cover.webp",
-  tagline: "Discover your next adventure with us",
-  headline: "Travel Explorer",
+  website_name: "Andrew G Bliss",
+  background_cover_url: "/img/jumbotron.jpg",
+  tagline: "Let's build something together.",
+  headline: "Andrew G Bliss",
   description:
-    "Travel Explorer is a travel booking website that allows you to book flights, hotels, and car rentals. We offer a wide range of destinations and activities to choose from. Our goal is to make your travel experience as easy and enjoyable as possible.",
+    "Andrew G Bliss is a full-stack developer with a passion for building beautiful websites and applications.",
+  website_url: "andrewgbliss.com",
 };
 
 export default function Page() {
-  return <TravelSite options={options} />;
+  return <PortfolioSite options={options} />;
 }
