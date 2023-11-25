@@ -1,11 +1,11 @@
-import { HubspotForm } from "../_components/hubspot-form";
+import { HubspotForm } from "~/app/_components/hubspot-form";
 
-export default function Page() {
+export function Newsletter() {
   return (
-    <div className="container mx-auto">
-      <div className="flex h-screen items-center justify-center">
+    <div className="bg-white">
+      <div className="flex w-full items-center justify-center">
         <div className=" bg-white p-5">
-          <h2 className="text-lg text-black">Newsletter</h2>
+          <h2 className="text-3xl font-semibold text-black">Newsletter</h2>
           <div className="h-64 w-72 py-5 sm:w-96">
             <HubspotForm
               region="na1"

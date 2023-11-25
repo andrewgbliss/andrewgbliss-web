@@ -4,9 +4,12 @@ import { Button } from "~/components/ui/button";
 
 export function PricingSection() {
   return (
-    <section className="flex min-h-screen w-full items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100 py-12 text-black dark:from-zinc-900 dark:to-zinc-800">
+    <section className="flex  w-full items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100 py-12 text-black dark:from-zinc-900 dark:to-zinc-800">
       <div className="container px-4 md:px-6">
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+        <h2 className="pb-5 text-center text-5xl font-bold text-black dark:text-white">
+          Pricing
+        </h2>
+        <div className="grid grid-cols-1 gap-6 pt-8 md:grid-cols-3 md:gap-8">
           <div className="dark:bg-zinc-850 flex flex-col justify-between rounded-lg border border-gray-300 bg-white p-6 shadow-lg">
             <div>
               <h3 className="text-center text-2xl font-bold">Basic</h3>
@@ -29,7 +32,9 @@ export function PricingSection() {
               </ul>
             </div>
             <div className="mt-6">
-              <Button className="w-full">Get Started</Button>
+              <Button variant={"secondary"} className="w-full">
+                Get Started
+              </Button>
             </div>
           </div>
           <div className="dark:bg-zinc-850 relative flex flex-col justify-between rounded-lg border border-purple-500 bg-white p-6 shadow-lg">
@@ -96,7 +101,9 @@ export function PricingSection() {
               </ul>
             </div>
             <div className="mt-6">
-              <Button className="w-full">Get Started</Button>
+              <Button variant={"secondary"} className="w-full">
+                Get Started
+              </Button>
             </div>
           </div>
         </div>

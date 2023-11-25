@@ -26,7 +26,7 @@ export function HeroLinks() {
                 <Link legacyBehavior href="#">
                   <a
                     aria-current="page"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    className="rounded-md px-3 py-2 text-xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     href="#"
                   >
                     Home
@@ -34,23 +34,15 @@ export function HeroLinks() {
                 </Link>
                 <Link legacyBehavior href="#">
                   <a
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    className="rounded-md px-3 py-2 text-xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     href="#"
                   >
-                    About
+                    Buy
                   </a>
                 </Link>
                 <Link legacyBehavior href="#">
                   <a
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    href="#"
-                  >
-                    Services
-                  </a>
-                </Link>
-                <Link legacyBehavior href="#">
-                  <a
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    className="rounded-md px-3 py-2 text-xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     href="#"
                   >
                     Contact

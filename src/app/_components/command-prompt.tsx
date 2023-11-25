@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { apps } from "types/apps";
 
 const line_divider = "--------------------------";
 
@@ -13,69 +14,10 @@ show {app} -- Shows the app called {app}
 clear ------- Clears the screen
 `;
 
-type App = {
-  name: string;
-  href: string;
-  show?: boolean;
-};
-
-const apps: App[] = [
-  {
-    name: "zero",
-    href: "https://www.zerofallstudios.com",
-  },
-  {
-    name: "abybyo",
-    href: "https://www.abybyo.com",
-  },
-  {
-    name: "t3-stack",
-    href: "/t3-stack",
-  },
-  {
-    name: "t3-stack",
-    href: "/t3-stack",
-  },
-  {
-    name: "hero",
-    href: "/hero",
-  },
-  {
-    name: "authentication",
-    href: "/authentication",
-  },
-  {
-    name: "newsletter",
-    href: "/newsletter",
-  },
-  {
-    name: "flash-cards",
-    href: "/flash-cards",
-  },
-  {
-    name: "register",
-    href: "/register",
-  },
-  {
-    name: "memories",
-    href: "/memories",
-    show: false,
-  },
-  {
-    name: "resume",
-    href: "/resume",
-  },
-  {
-    name: "pricing",
-    href: "/pricing",
-  },
-];
-
 const ls_message = `Apps:
 ${apps
   .filter((g) => g.show !== false)
   .map((g) => g.name)
-  .sort()
   .join("\n")}
 `;
 
