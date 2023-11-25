@@ -1,7 +1,7 @@
-import { MarketingPage } from "~/components/pages/marketing";
-import type { MarketingSite } from "~/lib/marketing-site";
+import { TravelSite } from "~/components/travel-site/travel-site";
+import type { WebsiteOptions } from "~/components/travel-site/types";
 
-const options: MarketingSite = {
+const options: WebsiteOptions = {
   logo: {
     img_src: "/img/travel-logo.webp",
     website_name: "Travel Explorer",
@@ -15,5 +15,5 @@ const options: MarketingSite = {
 };
 
 export default function Page() {
-  return <MarketingPage options={options} />;
+  return <TravelSite options={options} />;
 }

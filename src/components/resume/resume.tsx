@@ -3,9 +3,9 @@
 import { Grid, Box, Divider, Link, Container } from "@mui/material";
 import Theme from "~/components/mui/theme/Theme";
 import { Paper, List, Chips } from "~/components/mui/containers";
-import Gravatar from "~/components/gravatar";
+import Gravatar from "~/components/ui/gravatar";
 import { H4, H6, Caption, Body2 } from "~/components/mui/typography";
-import { resume } from "~/lib/resume";
+import { resume } from "./types";
 import {
   Home as HomeIcon,
   Email as EmailIcon,

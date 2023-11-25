@@ -1,10 +1,10 @@
-import { TopBar } from "~/components/top-bar";
-import { H1 } from "./ui/h1";
+import { TopBar } from "~/components/travel-site/top-bar";
+import { H1 } from "../ui/h1";
 import { TravelSearchForm } from "./travel-search-form";
-import { Tagline } from "./ui/tagline";
-import type { MarketingSite } from "~/lib/marketing-site";
+import { Tagline } from "../ui/tagline";
+import type { WebsiteOptions } from "./types";
 
-export function HeroSection({ options }: { options: MarketingSite }) {
+export function HeroSection({ options }: { options: WebsiteOptions }) {
   return (
     <section
       className="relative h-screen bg-cover bg-no-repeat"

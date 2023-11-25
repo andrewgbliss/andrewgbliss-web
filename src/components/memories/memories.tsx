@@ -7,7 +7,7 @@ import { CircularProgress } from "~/components/ui/circular-progress";
 import { Fragment, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import photos from "../lib/photos.json";
+import photos from "./photos.json";
 import useImageLoaded from "~/hooks/useImageLoaded";
 import { ScrollFadeIn as FadeIn } from "~/components/ui/animations";
 

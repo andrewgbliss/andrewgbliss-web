@@ -3,7 +3,7 @@ import Link from "next/link";
 import { cn } from "~/lib/utils";
 import { buttonVariants } from "~/components/ui/button";
 import { UserAuthForm } from "~/app/login/components/user-auth-form";
-import { ModeToggle } from "~/components/mode-toggle";
+import { ModeToggle } from "~/components/ui/mode-toggle";
 
 export const metadata: Metadata = {
   title: "Authentication",

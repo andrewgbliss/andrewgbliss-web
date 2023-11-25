@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 import { cookies } from "next/headers";
 import { TRPCReactProvider } from "~/trpc/react";
-import { ThemeProvider } from "~/components/theme-provider";
+import { ThemeProvider } from "~/components/ui/theme-provider";
 
 export const metadata = {
   title: "Andrew G Bliss",

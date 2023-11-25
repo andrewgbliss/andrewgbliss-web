@@ -1,4 +1,4 @@
-import { CommandPrompt } from "~/app/_components/command-prompt";
+import { CommandPrompt } from "~/components/cli/command-prompt";
 import { promises as fs } from "fs";
 import path from "path";
 

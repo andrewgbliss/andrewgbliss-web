@@ -20,7 +20,7 @@ export type Education = {
   name: string;
 };
 
-export type Resume = {
+export type ResumeOptions = {
   name: string;
   email: string;
   phone: string;
@@ -31,7 +31,7 @@ export type Resume = {
   links: Array<string>;
 };
 
-export const resume = {
+export const resume: ResumeOptions = {
   name: "Andrew Bliss",
   email: "andrewgbliss@gmail.com",
   phone: "801.440.5615",

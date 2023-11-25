@@ -7,11 +7,11 @@ import Link from "next/link";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { HeroLinks } from "./hero-links";
-import { Label } from "./ui/label";
+import { Label } from "../ui/label";
 import { useEffect, useState } from "react";
-import type { MarketingSite } from "~/lib/marketing-site";
+import type { WebsiteOptions } from "./types";
 
-const Logo = ({ options }: { options: MarketingSite }) => {
+const Logo = ({ options }: { options: WebsiteOptions }) => {
   return (
     <div className="flex items-center gap-5">
       <Link className="text-lg font-bold text-blue-500" href="#">
@@ -35,7 +35,7 @@ const Logo = ({ options }: { options: MarketingSite }) => {
   );
 };
 
-export function TopBar({ options }: { options: MarketingSite }) {
+export function TopBar({ options }: { options: WebsiteOptions }) {
   const [opaque, setOpaque] = useState(false);
 
   useEffect(() => {

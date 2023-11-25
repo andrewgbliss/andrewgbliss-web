@@ -1,6 +1,6 @@
-import type { MarketingSite } from "~/lib/marketing-site";
+import type { WebsiteOptions } from "./types";
 
-export function TaglineSection({ options }: { options: MarketingSite }) {
+export function TaglineSection({ options }: { options: WebsiteOptions }) {
   return (
     <section className="flex h-96 flex-col items-center justify-center space-y-6 p-4 py-10">
       <div className="text-center">

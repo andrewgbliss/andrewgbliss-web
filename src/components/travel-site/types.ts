@@ -3,7 +3,7 @@ export type Logo = {
   website_name: string;
 };
 
-export type MarketingSite = {
+export type WebsiteOptions = {
   logo: Logo;
   background_cover_url: string;
   website_name: string;

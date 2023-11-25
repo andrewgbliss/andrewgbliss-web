@@ -1,4 +1,4 @@
-import { HubspotForm } from "~/app/_components/hubspot-form";
+import { HubspotForm } from "~/components/hubspot/hubspot-form";
 
 export function Newsletter() {
   return (
