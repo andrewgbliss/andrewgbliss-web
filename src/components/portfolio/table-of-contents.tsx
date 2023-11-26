@@ -15,6 +15,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { ShareButton } from "../ui/buttons/share-button";
+import { QrCodeButtonDialog } from "../ui/buttons/qr-code-button";
 
 const CardItem = ({
   title,
@@ -22,19 +23,21 @@ const CardItem = ({
   badge,
   tagline,
   href,
+  top_right,
 }: {
   title: string;
   imgSrc: string;
   tagline: string;
   href: string;
   badge: React.ReactNode;
+  top_right: React.ReactNode;
 }) => {
   return (
     <Card className="shadow-xl dark:bg-white dark:text-black">
       <CardHeader>
         <div className="flex justify-between">
           <CardTitle className="lg:text-2xl xl:text-3xl">{title}</CardTitle>
-          <ShareButton defaultValue={href} />
+          {top_right}
         </div>
         {badge}
       </CardHeader>
@@ -76,6 +79,7 @@ export function TableOfContents() {
             tagline="Beach adventures starting at $99."
             href="/travel"
             badge={<Badge className="bg-red-500 text-white">Best Seller</Badge>}
+            top_right={<ShareButton defaultValue={"/travel"} />}
           />
           <CardItem
             title="Zero Fall Studios"
@@ -85,6 +89,9 @@ export function TableOfContents() {
             badge={
               <Badge className="bg-blue-500 text-white">New Arrival</Badge>
             }
+            top_right={
+              <QrCodeButtonDialog value={"https://www.zerofallstudios.com"} />
+            }
           />
           <CardItem
             title="Abybyo"
@@ -92,6 +99,7 @@ export function TableOfContents() {
             tagline="Study Journal."
             href="https://www.abybyo.com"
             badge={<Badge className="bg-black text-white">Featured</Badge>}
+            top_right={<ShareButton defaultValue={"https://www.abybyo.com"} />}
           />
         </div>
       </div>
