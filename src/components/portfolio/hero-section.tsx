@@ -38,12 +38,21 @@ export function HeroSection({ options }: { options: WebsiteOptions }) {
               <div>
                 <FadeIn wait={2000}>
                   <div className="flex h-full flex-col items-center justify-center space-y-6 px-4 sm:px-6 lg:px-8">
-                    <Link
-                      href="#portfolio"
-                      className="rounded-md bg-gray-700 px-3 py-2 text-xl  font-medium hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >
-                      Portfolio
-                    </Link>
+                    <div className="flex gap-5">
+                      <Link
+                        href="#portfolio"
+                        className="rounded-md bg-gray-700 px-3 py-2 text-xl  font-medium hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Portfolio
+                      </Link>
+                      <Link
+                        href="/resume"
+                        target="_blank"
+                        className="rounded-md bg-gray-700 px-3 py-2 text-xl  font-medium hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Resume
+                      </Link>
+                    </div>
                     <div>
                       <ModeToggle />
                     </div>

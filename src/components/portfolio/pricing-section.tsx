@@ -4,7 +4,10 @@ import { Button } from "~/components/ui/button";
 
 export function PricingSection() {
   return (
-    <section className="flex  w-full items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100 py-12 text-black dark:from-zinc-900 dark:to-zinc-800">
+    <section
+      id="pricing"
+      className="flex w-full items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100 py-12 text-black dark:from-zinc-900 dark:to-zinc-800"
+    >
       <div className="container px-4 md:px-6">
         <h2 className="pb-5 text-center text-5xl font-bold text-black dark:text-white">
           Pricing
