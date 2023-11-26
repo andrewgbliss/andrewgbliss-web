@@ -14,20 +14,20 @@ export function PricingSection() {
             <div>
               <h3 className="text-center text-2xl font-bold">Basic</h3>
               <div className="mt-4 text-center text-zinc-600 dark:text-zinc-400">
-                <span className="text-4xl font-bold">$29</span>/ month
+                <span className="text-4xl font-bold">$100</span>
               </div>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  720p Video Rendering
+                  Website Setup
                 </li>
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  2GB Cloud Storage
+                  1 page design and development
                 </li>
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  Basic Video Templates
+                  1 template
                 </li>
               </ul>
             </div>
@@ -44,24 +44,24 @@ export function PricingSection() {
             <div>
               <h3 className="text-center text-2xl font-bold">Pro</h3>
               <div className="mt-4 text-center text-zinc-600 dark:text-zinc-400">
-                <span className="text-4xl font-bold">$59</span>/ month
+                <span className="text-4xl font-bold">$500</span>
               </div>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
                   <IconCheck className="text-2xs mr-2 rounded-full bg-green-500 p-1 text-white" />
-                  1080p Video Rendering
+                  Website Setup
                 </li>
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  10GB Cloud Storage
+                  5 page design and development
                 </li>
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  Premium Video Templates
+                  1 template
                 </li>
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  Collaboration Tools
+                  Support
                 </li>
               </ul>
             </div>
@@ -75,28 +75,28 @@ export function PricingSection() {
             <div>
               <h3 className="text-center text-2xl font-bold">Enterprise</h3>
               <div className="mt-4 text-center text-zinc-600 dark:text-zinc-400">
-                <span className="text-4xl font-bold">$99</span>/ month
+                <span className="text-4xl font-bold">$1000</span>
               </div>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
-                  <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  4K Video Rendering
+                  <IconCheck className="text-2xs mr-2 rounded-full bg-green-500 p-1 text-white" />
+                  Website Setup
                 </li>
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  Unlimited Cloud Storage
+                  Many page designs and development
                 </li>
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  Custom Video Templates
+                  Many templates
                 </li>
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  Advanced Collaboration Tools
+                  Support
                 </li>
                 <li className="flex items-center">
                   <IconCheck className="mr-2 rounded-full bg-green-500 p-1 text-xs text-white" />
-                  Dedicated Support
+                  Enterprise features
                 </li>
               </ul>
             </div>

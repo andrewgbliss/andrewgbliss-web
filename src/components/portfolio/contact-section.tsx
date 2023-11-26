@@ -14,7 +14,7 @@ export function ContactSection() {
         <CardContent>
           <div className="space-y-8 py-5">
             <div className="space-y-2">
-              <h2 className="text-3xl font-semibold">Contact Us</h2>
+              <h2 className="text-3xl font-semibold">Contact</h2>
               <p className="text-zinc-500 dark:text-zinc-400">
                 Fill out the form below and we&apos;ll get back to you as soon
                 as possible.

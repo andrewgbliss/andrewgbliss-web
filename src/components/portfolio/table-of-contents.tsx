@@ -60,7 +60,7 @@ const CardItem = ({
 
 export function TableOfContents() {
   return (
-    <section id="portfolio" className="w-screen p-6  sm:p-12">
+    <section id="portfolio" className="w-full p-6 sm:p-12">
       <div className="py-24 text-center">
         <h2 className="text-5xl font-bold">Portfolio</h2>
       </div>

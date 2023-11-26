@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export function SaleBannerSection() {
   return (
-    <section className="w-screen bg-black p-6 sm:p-12">
+    <section className="w-full bg-black p-6 sm:p-12">
       <div className="grid gap-4">
         <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-8">
           <div className="grid gap-1">
@@ -28,7 +28,7 @@ export function SaleBannerSection() {
           <Button
             className="w-full shrink-0 text-xl sm:w-96 md:ml-auto"
             size="lg"
-            variant="default"
+            variant="destructive"
           >
             Buy Now
           </Button>

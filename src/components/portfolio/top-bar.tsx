@@ -4,7 +4,6 @@
 
 import Link from "next/link";
 import { HeroLinks } from "./hero-links";
-import { Label } from "../ui/label";
 import { useEffect, useState } from "react";
 import type { WebsiteOptions } from "./types";
 import { ShoppingcartButton } from "../ui/buttons/shopping-cart";
@@ -24,8 +23,8 @@ const Logo = ({ options }: { options: WebsiteOptions }) => {
           }}
         /> */}
       </Link>
-      <Link className="text-lg font-bold" href={"/"}>
-        <Label className="text-xl sm:text-3xl">{options.website_name}</Label>
+      <Link className="text-xl sm:text-3xl" href={"/"}>
+        {options.website_name}
       </Link>
     </div>
   );
