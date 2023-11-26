@@ -14,6 +14,7 @@ import { Button } from "~/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { ShareButton } from "../ui/buttons/share-button";
 
 const CardItem = ({
   title,
@@ -31,7 +32,10 @@ const CardItem = ({
   return (
     <Card className="shadow-xl dark:bg-white dark:text-black">
       <CardHeader>
-        <CardTitle className="lg:text-2xl xl:text-3xl">{title}</CardTitle>
+        <div className="flex justify-between">
+          <CardTitle className="lg:text-2xl xl:text-3xl">{title}</CardTitle>
+          <ShareButton defaultValue={href} />
+        </div>
         {badge}
       </CardHeader>
       <CardContent>
