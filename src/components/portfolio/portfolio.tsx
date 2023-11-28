@@ -6,6 +6,8 @@ import type { WebsiteOptions } from "~/components/portfolio/types";
 import { Newsletter } from "./newsletter";
 import { PricingSection } from "./pricing-section";
 import { ReturnUpButton } from "../ui/buttons/return-up-button";
+import { ServicesSection } from "./services-section";
+import { Footer } from "./footer";
 
 export function PortfolioSite({ options }: { options: WebsiteOptions }) {
   return (
@@ -13,10 +15,12 @@ export function PortfolioSite({ options }: { options: WebsiteOptions }) {
       <HeroSection options={options} />
       <SaleBannerSection />
       <TableOfContents />
+      <ServicesSection />
       <PricingSection />
       <ContactSection />
       <Newsletter />
       <ReturnUpButton />
+      <Footer />
     </main>
   );
 }

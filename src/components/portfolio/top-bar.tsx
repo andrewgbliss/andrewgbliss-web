@@ -7,6 +7,7 @@ import { HeroLinks } from "./hero-links";
 import { useEffect, useState } from "react";
 import type { WebsiteOptions } from "./types";
 import { ShoppingcartButton } from "../ui/buttons/shopping-cart";
+import { AButton } from "../ui/buttons/a-button";
 
 const Logo = ({ options }: { options: WebsiteOptions }) => {
   return (
@@ -23,9 +24,12 @@ const Logo = ({ options }: { options: WebsiteOptions }) => {
           }}
         /> */}
       </Link>
-      <Link className="text-xl sm:text-3xl" href={"/"}>
+      <Link className="hidden text-xl sm:block sm:text-3xl" href={"/"}>
         {options.website_name}
       </Link>
+      <div className="block sm:hidden">
+        <AButton />
+      </div>
     </div>
   );
 };

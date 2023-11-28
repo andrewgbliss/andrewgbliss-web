@@ -6,12 +6,10 @@ export function PricingSection() {
   return (
     <section
       id="pricing"
-      className="flex w-full items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100 py-12 text-black dark:from-zinc-900 dark:to-zinc-800"
+      className="flex w-full items-center justify-center py-12"
     >
       <div className="container px-4 md:px-6">
-        <h2 className="pb-5 text-center text-5xl font-bold text-black dark:text-white">
-          Pricing
-        </h2>
+        <h2 className="pb-5 text-center text-5xl font-bold">Pricing</h2>
         <div className="grid grid-cols-1 gap-6 pt-8 md:grid-cols-3 md:gap-8">
           <div className="dark:bg-zinc-850 flex flex-col justify-between rounded-lg border border-gray-300 bg-white p-6 shadow-lg">
             <div>

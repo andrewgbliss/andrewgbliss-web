@@ -45,7 +45,7 @@ export default function Page() {
           </div>
           <div className="text-center">
             <Link
-              href="/authentication"
+              href="/login"
               className="hover:text-primary-light text-primary"
             >
               Back to login

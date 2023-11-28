@@ -8,7 +8,7 @@ const options: WebsiteOptions = {
   },
   website_name: "Andrew G Bliss",
   background_cover_url: "/img/jumbotron.jpg",
-  tagline: "Let's build something together.",
+  tagline: "Software Engineer",
   headline: "Andrew G Bliss",
   description:
     "Andrew G Bliss is a full-stack developer with a passion for building beautiful websites and applications.",

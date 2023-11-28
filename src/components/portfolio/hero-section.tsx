@@ -4,7 +4,6 @@ import { ModeToggle } from "../ui/mode-toggle";
 import Link from "next/link";
 import { BusinessCard } from "./cards/business-card";
 import { FadeIn } from "../ui/animations";
-
 export function HeroSection({ options }: { options: WebsiteOptions }) {
   return (
     <section
@@ -21,22 +20,23 @@ export function HeroSection({ options }: { options: WebsiteOptions }) {
       </header>
       <div className="relative z-10 flex h-full flex-col items-center justify-center space-y-6 px-4 sm:px-6 lg:px-8">
         <FadeIn show>
-          <BusinessCard
-            title={"Welcome"}
-            tagline={options.tagline}
-            top_left={
-              <></>
-              // <Link
-              //   className="hidden text-lg font-bold text-blue-500 sm:block"
-              //   href={"/"}
-              // >
-              //   <Label className="text-xl">{options.website_url}</Label>
-              // </Link>
-            }
-            top_right={<></>}
-            call_to_action={
-              <div>
-                <FadeIn wait={2000}>
+          <div className="rounded-xl">
+            <BusinessCard
+              title={options.website_name}
+              tagline={options.tagline}
+              description={options.description}
+              top_left={
+                <></>
+                // <Link
+                //   className="hidden text-lg font-bold text-blue-500 sm:block"
+                //   href={"/"}
+                // >
+                //   <Label className="text-xl">{options.website_url}</Label>
+                // </Link>
+              }
+              top_right={<></>}
+              call_to_action={
+                <div>
                   <div className="flex h-full flex-col items-center justify-center space-y-6 px-4 sm:px-6 lg:px-8">
                     <div className="flex gap-5">
                       <Link
@@ -56,10 +56,10 @@ export function HeroSection({ options }: { options: WebsiteOptions }) {
                       <ModeToggle />
                     </div>
                   </div>
-                </FadeIn>
-              </div>
-            }
-          />
+                </div>
+              }
+            />
+          </div>
         </FadeIn>
       </div>
     </section>

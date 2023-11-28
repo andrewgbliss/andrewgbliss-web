@@ -52,9 +52,9 @@ export function QrCard({
   return (
     <Card
       id={href}
-      className="flex w-full flex-col-reverse divide-x shadow-xl sm:flex-row"
+      className="flex w-full flex-col divide-x shadow-xl sm:flex-row"
     >
-      <div className="w-full p-4 sm:w-2/3">
+      <div className="w-full p-4 sm:w-full">
         <Image
           alt={""}
           src={imgSrc}
