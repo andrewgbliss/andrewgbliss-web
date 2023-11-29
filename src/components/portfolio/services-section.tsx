@@ -26,14 +26,16 @@ export function ServicesSection() {
           <CardHeader>
             <CardTitle className="text-2xl">Web Design</CardTitle>
           </CardHeader>
-          <Image
-            alt="Web Design"
-            className="w-full object-cover"
-            width="200"
-            height="300"
-            src="/img/web-develop.webp"
-            sizes="(max-width: 768px) 100vw, 33vw"
-          />
+          <div className="h-64 overflow-hidden">
+            <Image
+              alt="Web Design"
+              className="w-full object-cover"
+              width="200"
+              height="300"
+              src="/img/web-develop.webp"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          </div>
           <CardContent className="space-y-4 py-2">
             <p className="text-xl">
               We provide modern and responsive web design services for your
@@ -63,14 +65,16 @@ export function ServicesSection() {
           <CardHeader>
             <CardTitle className="text-2xl">Web Development</CardTitle>
           </CardHeader>
-          <Image
-            alt="Web Development"
-            className="w-full object-cover"
-            height="200"
-            src="/img/soft-develop.webp"
-            sizes="(max-width: 768px) 100vw, 33vw"
-            width="200"
-          />
+          <div className="h-64 overflow-hidden">
+            <Image
+              alt="Web Development"
+              className="w-full object-cover"
+              height="200"
+              src="/img/soft-develop.webp"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              width="200"
+            />
+          </div>
           <CardContent className="space-y-4 py-2">
             <p className="text-xl">
               Our team offers comprehensive web development services using the
@@ -103,14 +107,16 @@ export function ServicesSection() {
           <CardHeader>
             <CardTitle className="text-2xl">UI / UX Development</CardTitle>
           </CardHeader>
-          <Image
-            alt="UI / UX Development"
-            className="w-full object-cover"
-            height="200"
-            src="/img/uiux-develop.webp"
-            sizes="(max-width: 768px) 100vw, 33vw"
-            width="200"
-          />
+          <div className="h-64 overflow-hidden">
+            <Image
+              alt="UI / UX Development"
+              className="w-full object-cover"
+              height="200"
+              src="/img/uiux-develop.webp"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              width="200"
+            />
+          </div>
           <CardContent className="space-y-4 py-2">
             <p className="text-xl">
               User interface design software, wireframes, user flow diagrams,

@@ -12,26 +12,28 @@ export function PortfolioSite({ options }: { options: WebsiteOptions }) {
   return (
     <main className="relative">
       <HeroSection options={options} />
-      <section className="relative flex h-64 items-center justify-center sm:h-96">
+      {/* <section className="relative flex h-64 items-center justify-center sm:h-96">
         <div
           className="parallax absolute inset-0 z-0 bg-cover"
           style={{
             backgroundImage: `url('img/pexels-luis-gomes.jpg')`,
           }}
         ></div>
-      </section>
+      </section> */}
       <TableOfContents />
       <ServicesSection />
       <PricingSection />
-      <section className="relative flex h-64 items-center justify-center sm:h-96">
+      <section className="relative flex h-screen items-center justify-center">
         <div
-          className="parallax absolute inset-0 z-0 bg-cover"
+          className="parallax absolute inset-0 z-0 flex items-center justify-center bg-cover "
           style={{
             backgroundImage: `url('img/pexels-mikael-blomkvist.jpg')`,
           }}
-        ></div>
+        >
+          <ContactSection />
+        </div>
       </section>
-      <ContactSection />
+
       <Newsletter />
       <ReturnUpButton />
       <Footer website_name={options.website_name} />

@@ -6,10 +6,7 @@ import { CardContent, Card } from "~/components/ui/card";
 
 export function ContactSection() {
   return (
-    <div
-      id="contact"
-      className="flex items-center justify-center bg-black p-4 sm:p-12"
-    >
+    <div id="contact" className="flex items-center justify-center p-4 sm:p-12">
       <Card className="dark:bg-white dark:text-black">
         <CardContent>
           <div className="space-y-8 py-5">

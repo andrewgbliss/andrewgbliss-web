@@ -60,10 +60,14 @@ const CardItem = ({
 
 export function TableOfContents() {
   return (
-    <section id="portfolio" className="w-full p-6 sm:p-12">
-      <div className="py-24 text-center">
-        <h2 className="text-5xl font-bold">Portfolio</h2>
-      </div>
+    <section
+      id="portfolio"
+      className="parallax  w-full p-6 sm:p-12"
+      style={{
+        backgroundImage: `url('img/pexels-luis-gomes.jpg')`,
+      }}
+    >
+      {/* <div className="parallax absolute inset-0 bg-cover"></div> */}
       <div className="grid gap-4 pb-24">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <CardItem
@@ -131,6 +135,23 @@ export function TableOfContents() {
               <Image
                 alt={"Dentist"}
                 src={"/img/dentist.png"}
+                className="w-full"
+                height="240"
+                width="113"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            }
+          />
+          <CardItem
+            title="Bug Report"
+            tagline="Bug report form for your website."
+            href="/bug-report"
+            badge={<Badge className="bg-green-500 text-white">Upcoming</Badge>}
+            top_right={<ShareButton defaultValue={"/dentist"} />}
+            img={
+              <Image
+                alt={"Bug Report"}
+                src={"/img/bug-report-form.png"}
                 className="w-full"
                 height="240"
                 width="113"
