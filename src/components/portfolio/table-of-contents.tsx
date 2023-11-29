@@ -19,18 +19,18 @@ import { QrCodeButtonDialog } from "../ui/buttons/qr-code-button";
 
 const CardItem = ({
   title,
-  imgSrc,
   badge,
   tagline,
   href,
   top_right,
+  img,
 }: {
   title: string;
-  imgSrc: string;
   tagline: string;
   href: string;
   badge: React.ReactNode;
   top_right: React.ReactNode;
+  img: React.ReactNode;
 }) => {
   return (
     <Card className="shadow-xl dark:bg-white dark:text-black">
@@ -42,14 +42,7 @@ const CardItem = ({
         {badge}
       </CardHeader>
       <CardContent>
-        <Image
-          alt={title}
-          src={imgSrc}
-          className="w-full"
-          height="240"
-          width="113"
-          sizes="(max-width: 768px) 100vw, 33vw"
-        />
+        <div className="h-48 overflow-hidden">{img}</div>
         <p className="pt-5 text-xl">{tagline}</p>
       </CardContent>
       <CardFooter>
@@ -72,18 +65,26 @@ export function TableOfContents() {
         <h2 className="text-5xl font-bold">Portfolio</h2>
       </div>
       <div className="grid gap-4 pb-24">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <CardItem
             title="Travel Explorer"
-            imgSrc="/img/travel-explorer.png"
             tagline="Beach adventures starting at $99."
             href="/travel"
             badge={<Badge className="bg-red-500 text-white">Best Seller</Badge>}
             top_right={<ShareButton defaultValue={"/travel"} />}
+            img={
+              <Image
+                alt={"Travel Explorer"}
+                src={"/img/travel-explorer.png"}
+                className="w-full"
+                height="240"
+                width="113"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            }
           />
           <CardItem
             title="Zero Fall Studios"
-            imgSrc="/img/zero-fall-studios.png"
             tagline="Dont Fall."
             href="https://www.zerofallstudios.com"
             badge={
@@ -92,14 +93,50 @@ export function TableOfContents() {
             top_right={
               <QrCodeButtonDialog value={"https://www.zerofallstudios.com"} />
             }
+            img={
+              <Image
+                alt={"Zero Fall Studios"}
+                src={"/img/zero-fall-studios.png"}
+                className="w-full"
+                height="240"
+                width="113"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            }
           />
           <CardItem
             title="Abybyo"
-            imgSrc="/img/abybyo-website.png"
             tagline="Study Journal."
             href="https://www.abybyo.com"
             badge={<Badge className="bg-black text-white">Featured</Badge>}
             top_right={<ShareButton defaultValue={"https://www.abybyo.com"} />}
+            img={
+              <Image
+                alt={"Abybyo"}
+                src={"/img/abybyo-website.png"}
+                className="w-full"
+                height="240"
+                width="113"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            }
+          />
+          <CardItem
+            title="Dentist"
+            tagline="Local Dentist."
+            href="/dentist"
+            badge={<Badge className="bg-green-500 text-white">Upcoming</Badge>}
+            top_right={<ShareButton defaultValue={"/dentist"} />}
+            img={
+              <Image
+                alt={"Dentist"}
+                src={"/img/dentist.png"}
+                className="w-full"
+                height="240"
+                width="113"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            }
           />
         </div>
       </div>

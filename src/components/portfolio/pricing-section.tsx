@@ -11,7 +11,7 @@ export function PricingSection() {
       <div className="container px-4 md:px-6">
         <h2 className="pb-5 text-center text-5xl font-bold">Pricing</h2>
         <div className="grid grid-cols-1 gap-6 pt-8 md:grid-cols-3 md:gap-8">
-          <div className="dark:bg-zinc-850 flex flex-col justify-between rounded-lg border border-gray-300 bg-white p-6 shadow-lg">
+          <div className="dark:bg-zinc-850 flex flex-col justify-between rounded-lg border border-gray-300 bg-white p-6 text-black shadow-lg">
             <div>
               <h3 className="text-center text-2xl font-bold">Basic</h3>
               <div className="mt-4 text-center text-zinc-600 dark:text-zinc-400">
@@ -38,7 +38,7 @@ export function PricingSection() {
               </Button>
             </div>
           </div>
-          <div className="dark:bg-zinc-850 relative flex flex-col justify-between rounded-lg border border-purple-500 bg-white p-6 shadow-lg">
+          <div className="dark:bg-zinc-850 relative flex flex-col justify-between rounded-lg border border-purple-500 bg-white p-6 text-black shadow-lg">
             <div className="absolute left-1/2 top-0 inline-block -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-gradient-to-r from-pink-500 to-purple-500 px-3 py-1 text-sm text-white">
               Popular
             </div>
@@ -72,7 +72,7 @@ export function PricingSection() {
               </Button>
             </div>
           </div>
-          <div className="dark:bg-zinc-850 flex flex-col justify-between rounded-lg border border-gray-300 bg-white p-6 shadow-lg">
+          <div className="dark:bg-zinc-850 flex flex-col justify-between rounded-lg border border-gray-300 bg-white p-6 text-black shadow-lg">
             <div>
               <h3 className="text-center text-2xl font-bold">Enterprise</h3>
               <div className="mt-4 text-center text-zinc-600 dark:text-zinc-400">

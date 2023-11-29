@@ -45,8 +45,7 @@ export function QrCodeButtonDialog({ value }: { value?: string }) {
 export function QrCodeButton() {
   return (
     <Button variant="outline">
-      <IconQRcode className="mr-2 h-6 w-6" />
-      Open QR Code
+      <IconQRcode className="h-6 w-6" />
     </Button>
   );
 }
