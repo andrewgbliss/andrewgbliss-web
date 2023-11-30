@@ -3,7 +3,6 @@
 "use client";
 
 import Link from "next/link";
-import { HeroLinks } from "./hero-links";
 import { useEffect, useState } from "react";
 import type { WebsiteOptions } from "./types";
 import { ShoppingcartButton } from "../ui/buttons/shopping-cart";
@@ -47,7 +46,6 @@ export function TopBar({ options }: { options: WebsiteOptions }) {
           <Logo options={options} />
         </div>
         <div className="flex">
-          {/* <HeroLinks /> */}
           <div className="p-3">
             <ShoppingcartButton badge={"0"} />
           </div>
