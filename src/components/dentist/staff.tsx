@@ -19,65 +19,53 @@ export function Staff() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div className="group transform transition-transform duration-200 hover:scale-105">
             <div className="overflow-hidden rounded-lg p-6 shadow-lg ">
-              <div className="mb-6">
-                <Avatar>
-                  <AvatarImage
-                    alt="Staff member"
-                    src="/placeholder-avatar.jpg"
-                  />
+              <div className="mb-6 flex justify-center">
+                <Avatar className="h-32 w-36">
+                  <AvatarImage alt="Staff member" src="/img/dentist-1.png" />
                   <AvatarFallback>SM</AvatarFallback>
                 </Avatar>
               </div>
-              <h2 className="mb-2 text-xl font-bold">Staff Member</h2>
-              <p className="mb-4 text-gray-600 dark:text-gray-400">Position</p>
+              <h2 className="mb-2 text-xl font-bold">Dr Lewis Thompson</h2>
+              <p className="mb-4 text-gray-600 dark:text-gray-400">Dentist</p>
               <p className="text-gray-600 dark:text-gray-400">Brief Bio</p>
             </div>
           </div>
           <div className="group transform transition-transform duration-200 hover:scale-105">
             <div className="overflow-hidden rounded-lg  p-6 shadow-lg ">
-              <div className="mb-6">
-                <Avatar>
-                  <AvatarImage
-                    alt="Staff member"
-                    src="/placeholder-avatar.jpg"
-                  />
+              <div className="mb-6 flex justify-center">
+                <Avatar className="h-32 w-36">
+                  <AvatarImage alt="Staff member" src="/img/dentist-2.png" />
                   <AvatarFallback>SM</AvatarFallback>
                 </Avatar>
               </div>
-              <h2 className="mb-2 text-xl font-bold">Staff Member</h2>
-              <p className="mb-4 text-gray-600 dark:text-gray-400">Position</p>
+              <h2 className="mb-2 text-xl font-bold">Dr Sarah Katrowski</h2>
+              <p className="mb-4 text-gray-600 dark:text-gray-400">Dentist</p>
               <p className="text-gray-600 dark:text-gray-400">Brief Bio</p>
             </div>
           </div>
           <div className="group transform transition-transform duration-200 hover:scale-105">
             <div className="overflow-hidden rounded-lg  p-6 shadow-lg ">
-              <div className="mb-6">
-                <Avatar>
-                  <AvatarImage
-                    alt="Staff member"
-                    src="/placeholder-avatar.jpg"
-                  />
+              <div className="mb-6 flex justify-center">
+                <Avatar className="h-32 w-36">
+                  <AvatarImage alt="Staff member" src="/img/dentist-3.png" />
                   <AvatarFallback>SM</AvatarFallback>
                 </Avatar>
               </div>
-              <h2 className="mb-2 text-xl font-bold">Staff Member</h2>
-              <p className="mb-4 text-gray-600 dark:text-gray-400">Position</p>
+              <h2 className="mb-2 text-xl font-bold">Dr Micheal Fitsimmons</h2>
+              <p className="mb-4 text-gray-600 dark:text-gray-400">Dentist</p>
               <p className="text-gray-600 dark:text-gray-400">Brief Bio</p>
             </div>
           </div>
           <div className="group transform transition-transform duration-200 hover:scale-105">
             <div className="overflow-hidden rounded-lg p-6 shadow-lg ">
-              <div className="mb-6">
-                <Avatar className="bg-slate-300">
-                  <AvatarImage
-                    alt="Staff member"
-                    src="/placeholder-avatar.jpg"
-                  />
+              <div className="mb-6 flex justify-center">
+                <Avatar className="h-32 w-36">
+                  <AvatarImage alt="Staff member" src="/img/dentist-4.png" />
                   <AvatarFallback>SM</AvatarFallback>
                 </Avatar>
               </div>
-              <h2 className="mb-2 text-xl font-bold">Staff Member</h2>
-              <p className="mb-4 text-gray-600 dark:text-gray-400">Position</p>
+              <h2 className="mb-2 text-xl font-bold">Dr Karen McJohnson</h2>
+              <p className="mb-4 text-gray-600 dark:text-gray-400">Dentist</p>
               <p className="text-gray-600 dark:text-gray-400">Brief Bio</p>
             </div>
           </div>
