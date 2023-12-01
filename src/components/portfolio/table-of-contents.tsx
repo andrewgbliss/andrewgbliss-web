@@ -1,12 +1,5 @@
-import {
-  CardTitle,
-  CardHeader,
-  CardContent,
-  CardFooter,
-  Card,
-} from "~/components/ui/card";
+import { CardTitle, CardHeader, CardContent, Card } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
-import { Button } from "~/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -32,7 +25,11 @@ const CardItem = ({
     <Card className="shadow-xl dark:bg-white dark:text-black">
       <CardHeader>
         <div className="flex justify-between">
-          <CardTitle className="lg:text-2xl xl:text-3xl">{title}</CardTitle>
+          <CardTitle className="lg:text-2xl xl:text-3xl">
+            <Link href={href} target="_blank">
+              {title}
+            </Link>
+          </CardTitle>
           {top_right}
         </div>
         {badge}
@@ -41,15 +38,6 @@ const CardItem = ({
         <div className="h-48 overflow-hidden">{img}</div>
         <p className="pt-5 text-xl">{tagline}</p>
       </CardContent>
-      <CardFooter>
-        <div className="flex w-full justify-center">
-          <Link href={href} target="_blank">
-            <Button className="text-xl" variant="action">
-              Show
-            </Button>
-          </Link>
-        </div>
-      </CardFooter>
     </Card>
   );
 };

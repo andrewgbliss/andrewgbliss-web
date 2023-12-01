@@ -20,9 +20,11 @@ export function PortfolioSite({ options }: { options: WebsiteOptions }) {
           }}
         ></div>
       </section> */}
-      <TableOfContents />
       <ServicesSection />
+      <TableOfContents />
+
       <PricingSection />
+      <Newsletter />
       <section className="relative flex h-screen items-center justify-center">
         <div
           className="parallax absolute inset-0 z-0 flex items-center justify-center bg-cover "
@@ -34,7 +36,6 @@ export function PortfolioSite({ options }: { options: WebsiteOptions }) {
         </div>
       </section>
 
-      <Newsletter />
       <ReturnUpButton />
       <Footer website_name={options.website_name} />
     </main>
