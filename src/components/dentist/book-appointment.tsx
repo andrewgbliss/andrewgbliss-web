@@ -1,4 +1,19 @@
+import Link from "next/link";
 import { Button } from "~/components/ui/button";
+
+const AvailableButton = () => {
+  return (
+    <Link href="/dentist/confirm-appointment">
+      <Button
+        className="w-full bg-green-500 text-white"
+        size="sm"
+        variant="action"
+      >
+        Available
+      </Button>
+    </Link>
+  );
+};
 
 export function BookAppointment() {
   return (
@@ -52,20 +67,8 @@ export function BookAppointment() {
         <div className="space-y-4">
           <p className="text-lg font-semibold">Monday</p>
           <div className="grid gap-4">
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
@@ -98,20 +101,8 @@ export function BookAppointment() {
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
@@ -141,13 +132,7 @@ export function BookAppointment() {
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
@@ -166,13 +151,7 @@ export function BookAppointment() {
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
@@ -184,27 +163,9 @@ export function BookAppointment() {
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
+            <AvailableButton />
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
@@ -217,13 +178,7 @@ export function BookAppointment() {
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
@@ -232,57 +187,21 @@ export function BookAppointment() {
         <div className="space-y-4">
           <p className="text-lg font-semibold">Friday</p>
           <div className="grid gap-4">
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
+            <AvailableButton />
+            <AvailableButton />
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
@@ -294,53 +213,23 @@ export function BookAppointment() {
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
             <Button className="w-full bg-gray-300" size="sm" variant="outline">
               -
             </Button>
-            <Button
-              className="w-full bg-green-500 text-white"
-              size="sm"
-              variant="action"
-            >
-              Available
-            </Button>
+            <AvailableButton />
           </div>
         </div>
       </div>

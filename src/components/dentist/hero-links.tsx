@@ -108,7 +108,7 @@ export function HeroLinks() {
                   Contact
                 </Link>
                 <Link
-                  href="#schedule"
+                  href="/dentist/book-appointment"
                   className="rounded-md bg-gray-700 px-3 py-2 text-xl  font-medium hover:text-white dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >
                   Schedule
