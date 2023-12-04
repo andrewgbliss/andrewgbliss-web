@@ -5,6 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { QrCodeButtonDialog } from "../ui/buttons/qr-code-button";
 import { portfolio_items } from "./portfolio-items";
+import { ScrollFadeIn } from "../ui/animations";
 
 const CardItem = ({
   title,
@@ -22,23 +23,27 @@ const CardItem = ({
   img: React.ReactNode;
 }) => {
   return (
-    <Card className="shadow-xl dark:bg-white dark:text-black">
-      <CardHeader>
-        <div className="flex justify-between">
-          <CardTitle className="lg:text-2xl xl:text-3xl">
-            <Link href={href} target="_blank">
-              {title}
-            </Link>
-          </CardTitle>
-          {top_right}
-        </div>
-        {badge}
-      </CardHeader>
-      <CardContent>
-        <div className="h-48 overflow-hidden">{img}</div>
-        <p className="pt-5 text-xl">{tagline}</p>
-      </CardContent>
-    </Card>
+    <div>
+      <ScrollFadeIn>
+        <Card className="shadow-xl dark:bg-white dark:text-black">
+          <CardHeader>
+            <div className="flex justify-between">
+              <CardTitle className="lg:text-2xl xl:text-3xl">
+                <Link href={href} target="_blank">
+                  {title}
+                </Link>
+              </CardTitle>
+              {top_right}
+            </div>
+            {badge}
+          </CardHeader>
+          <CardContent>
+            <div className="h-48 overflow-hidden">{img}</div>
+            <p className="pt-5 text-xl">{tagline}</p>
+          </CardContent>
+        </Card>
+      </ScrollFadeIn>
+    </div>
   );
 };
 
@@ -46,7 +51,7 @@ export function TableOfContents() {
   return (
     <section
       id="portfolio"
-      className="parallax  w-full p-6 sm:p-12"
+      className="parallax  h-screen w-full p-6 sm:p-12"
       style={{
         backgroundImage: `url('img/pexels-luis-gomes.jpg')`,
       }}

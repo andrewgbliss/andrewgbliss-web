@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { type RefObject, useEffect, useState } from "react";
 
@@ -12,7 +14,7 @@ function getOffset(el: RefObject<HTMLDivElement> | undefined | null) {
   ) {
     _x += (el?.current?.offsetLeft || 0) - (el?.current?.scrollLeft || 0);
     _y += (el?.current?.offsetTop || 0) - (el?.current?.scrollTop || 0);
-    // el = el?.current?.offsetParent as RefObject<HTMLDivElement>;
+    el = el?.current?.offsetParent as any;
   }
   return { top: _y, left: _x };
 }
