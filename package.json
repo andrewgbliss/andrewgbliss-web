@@ -37,6 +37,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "drizzle-orm": "^0.28.5",
+    "embla-carousel-react": "8.0.0-rc15",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.292.0",
     "md5": "^2.3.0",
