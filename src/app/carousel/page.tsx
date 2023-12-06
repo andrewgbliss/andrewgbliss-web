@@ -19,6 +19,7 @@ export default function Page() {
               height="100"
               src={slide.img_src}
               sizes="(max-width: 768px) 100vw, 100vw"
+              priority
             />
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform bg-white p-5 sm:bottom-0 sm:left-auto sm:right-0 sm:top-auto sm:transform-none">
               <QRCode
