@@ -11,7 +11,7 @@ const options: WebsiteOptions = {
   tagline: "Software Engineer",
   headline: "Andrew G Bliss",
   description:
-    "Professional with more than 15 plus years of experience. Current stack is React, NextJs, Typescript, Postgres.",
+    "Professional with more than 15 plus years of experience. Current stack is React, Next.js, Typescript, Postgres.",
   website_url: "andrewgbliss.com",
 };
 
