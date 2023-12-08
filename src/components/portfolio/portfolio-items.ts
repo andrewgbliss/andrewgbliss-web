@@ -51,8 +51,7 @@ export const portfolio_items = [
   },
   {
     title: "Ecommerce",
-    tagline:
-      "Ecommerce Site is a website template for a business that sells products online.",
+    tagline: "Template for an online store.",
     href: "/ecommerce",
     badge: {
       color: "bg-red-500",

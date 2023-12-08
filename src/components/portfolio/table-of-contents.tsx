@@ -39,7 +39,7 @@ const CardItem = ({
           </CardHeader>
           <CardContent>
             <div className="h-48 overflow-hidden">{img}</div>
-            <p className="pt-5 text-xl">{tagline}</p>
+            <p className="pt-5 text-lg">{tagline}</p>
           </CardContent>
         </Card>
       </ScrollFadeIn>
@@ -51,7 +51,7 @@ export function TableOfContents() {
   return (
     <section
       id="portfolio"
-      className="parallax  h-screen w-full p-6 sm:p-12"
+      className="parallax  min-h-screen w-full p-6 sm:p-12"
       style={{
         backgroundImage: `url('img/pexels-luis-gomes.jpg')`,
       }}

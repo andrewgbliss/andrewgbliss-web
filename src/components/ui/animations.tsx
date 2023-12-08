@@ -100,3 +100,55 @@ export const ScrollFadeIn: React.FC<Props> = ({ children, ...rest }) => {
     </div>
   );
 };
+
+interface SlideUpProps {
+  show?: boolean;
+  opacity?: Array<string>;
+  fadeIn?: boolean;
+  fadeOut?: boolean;
+  duration?: number;
+  children: React.ReactNode;
+}
+
+export function SlideUp(props: SlideUpProps) {
+  const { show, children, fadeIn, fadeOut, duration } = props;
+  let { opacity = ["opacity-0", "opacity-100"] } = props;
+
+  if (fadeIn) opacity = ["opacity-0", "opacity-100"];
+  if (fadeOut) opacity = ["opacity-100", "opacity-0"];
+  const [opacityFrom, opacityTo] = opacity;
+
+  const durationClassName =
+    (duration && durations.get(duration)) ?? "duration-1000";
+
+  return (
+    <Transition
+      show={show}
+      unmount={false}
+      enter={`transition ease-out  ${durationClassName || ""}`}
+      enterFrom={`${opacityFrom || ""} scale-50 transform translate-y-full`}
+      enterTo={`${opacityTo || ""} scale-100 transform translate-y-0`}
+      leave={`transition ease-out  ${durationClassName || ""}`}
+      leaveFrom={`${opacityTo || ""} scale-100 transform translate-y-0`}
+      leaveTo={`${opacityFrom || ""} scale-50 transform translate-y-full`}
+    >
+      {children}
+    </Transition>
+  );
+}
+
+export function ScrollSlideUp(props: SlideUpProps) {
+  const { children, ...rest } = props;
+  const ref = useRef<HTMLDivElement>(null);
+  const [show, setShow] = useState<boolean>(false);
+  useTriggerOnScroll(ref, (triggered: boolean) => {
+    setShow(triggered);
+  });
+  return (
+    <div ref={ref}>
+      <SlideUp show={show} {...rest}>
+        {children}
+      </SlideUp>
+    </div>
+  );
+}

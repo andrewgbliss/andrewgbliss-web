@@ -61,7 +61,7 @@ export function QrCard({
           className="w-full"
           height="240"
           width="113"
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 768px) 100vw, 100vw"
         />
         <div className="flex items-center justify-between">
           <div>
