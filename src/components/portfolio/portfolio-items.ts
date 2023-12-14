@@ -69,4 +69,14 @@ export const portfolio_items = [
     },
     img_src: "/img/memories.png",
   },
+  {
+    title: "Bid Calculator",
+    tagline: "Estimate your time and get paid.",
+    href: "/bid-calculator",
+    badge: {
+      color: "bg-green-500",
+      text: "Development",
+    },
+    img_src: "/img/bid-calculator.png",
+  },
 ];
