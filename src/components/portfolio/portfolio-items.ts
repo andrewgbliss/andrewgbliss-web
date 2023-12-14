@@ -24,7 +24,7 @@ export const portfolio_items = [
     tagline: "Study Journal.",
     href: "https://www.abybyo.com",
     badge: {
-      color: "bg-black-500",
+      color: "bg-red-500",
       text: "Featured",
     },
     img_src: "/img/abybyo-website.png",
@@ -58,5 +58,15 @@ export const portfolio_items = [
       text: "Upcoming",
     },
     img_src: "/img/ecommerce-site.png",
+  },
+  {
+    title: "Memories",
+    tagline: "Share your favorite photos.",
+    href: "/memories",
+    badge: {
+      color: "bg-red-500",
+      text: "New Arrival",
+    },
+    img_src: "/img/memories.png",
   },
 ];

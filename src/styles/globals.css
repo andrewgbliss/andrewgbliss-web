@@ -195,4 +195,26 @@
       var(--brand-secondary)
     );
   }
+
+  .bg-brand {
+    @apply bg-cover bg-center bg-no-repeat;
+    background-image: linear-gradient(
+        rgba(18, 26, 46, 0.9),
+        rgba(18, 26, 46, 0.3)
+      ),
+      url(/img/cover2.jpg);
+  }
+
+  .highlight {
+    @apply h-64 rounded-lg bg-gray-300 shadow-2xl;
+  }
+
+  .highlight code {
+    @apply bg-gray-300 p-4;
+  }
+
+  .lud-container {
+    @apply mx-auto w-full xl:w-2/3;
+    max-width: 100%;
+  }
 }

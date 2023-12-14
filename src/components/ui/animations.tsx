@@ -152,3 +152,69 @@ export function ScrollSlideUp(props: SlideUpProps) {
     </div>
   );
 }
+
+interface SlideRightProps {
+  show?: boolean;
+  children: React.ReactNode;
+}
+
+export default function SlideRight(props: SlideRightProps) {
+  const { show = true, children } = props;
+  return (
+    <Transition
+      show={show}
+      enter="transform transition ease-out duration-1000"
+      enterFrom={`opacity-0 -translate-x-24`}
+      enterTo={`opacity-100 -translate-x-0`}
+      leave="transform transition ease-out duration-1000"
+      leaveFrom={`opacity-100 -translate-x-0`}
+      leaveTo={`opacity-0 -translate-x-24`}
+    >
+      {children}
+    </Transition>
+  );
+}
+
+interface SlideLeftProps {
+  show?: boolean;
+  children: React.ReactNode;
+}
+
+export function SlideLeft(props: SlideLeftProps) {
+  const { show = true, children } = props;
+  return (
+    <Transition
+      show={show}
+      enter="transform transition ease-out duration-1000"
+      enterFrom={`opacity-0 translate-x-24`}
+      enterTo={`opacity-100 translate-x-0`}
+      leave="transform transition ease-out duration-1000"
+      leaveFrom={`opacity-100 translate-x-0`}
+      leaveTo={`opacity-0 translate-x-24`}
+    >
+      {children}
+    </Transition>
+  );
+}
+
+interface SlideDownProps {
+  show?: boolean;
+  children: React.ReactNode;
+}
+
+export function SlideDown(props: SlideDownProps) {
+  const { show = true, children } = props;
+  return (
+    <Transition
+      show={show}
+      enter="transform transition ease-in-out duration-1000"
+      enterFrom={`opacity-0 -translate-y-24`}
+      enterTo={`opacity-100 -translate-y-0`}
+      leave="transform transition ease-in-out duration-1000"
+      leaveFrom={`opacity-100 -translate-y-0`}
+      leaveTo={`opacity-0 -translate-y-24`}
+    >
+      {children}
+    </Transition>
+  );
+}

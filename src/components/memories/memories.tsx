@@ -10,6 +10,7 @@ import Link from "next/link";
 import photos from "./photos.json";
 import useImageLoaded from "~/hooks/useImageLoaded";
 import { ScrollFadeIn as FadeIn } from "~/components/ui/animations";
+import { Button } from "../ui/button";
 
 interface PhotoProps {
   src: string;
@@ -120,7 +121,7 @@ function Cover(props: CoverProps) {
 
 function BigDot() {
   return (
-    <div className="flex justify-center">
+    <div className="mb-20 flex h-12 w-12 justify-center ">
       <FadeIn>
         <div className="mb-20 h-12 w-12 rounded-full bg-purple-400" />
       </FadeIn>
@@ -130,7 +131,7 @@ function BigDot() {
 
 function MediumDot() {
   return (
-    <div className="flex justify-center">
+    <div className="mb-20 flex h-8 w-8 justify-center ">
       <FadeIn>
         <div className="mb-20 h-8 w-8 rounded-full bg-purple-400" />
       </FadeIn>
@@ -140,7 +141,7 @@ function MediumDot() {
 
 function SmallDot() {
   return (
-    <div className="flex justify-center">
+    <div className="mb-20 flex h-6 w-6 justify-center ">
       <FadeIn>
         <div className="mb-20 h-6 w-6 rounded-full bg-purple-400" />
       </FadeIn>
@@ -230,7 +231,7 @@ export const Memories: React.FC = () => {
       })}
       <footer>
         <div className="flex items-center justify-center">
-          <div className="p-5 pt-10 sm:w-1/3 sm:pt-20">
+          <div className="p-5 pt-10  sm:pt-20">
             <h2 className="label text-5xl">Happy Memories!</h2>
             <div className="flex justify-between px-10 pt-10 sm:pt-10">
               <div className="heart hover-expand" />
@@ -240,13 +241,9 @@ export const Memories: React.FC = () => {
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <div className="pt-10">
-            <div className="flex flex-col gap-5">
-              <div className="btn">
-                <Link href="/">Home</Link>
-              </div>
-            </div>
-          </div>
+          <Link href="/">
+            <Button variant={"secondary"}>Home</Button>
+          </Link>
         </div>
         <div className="h-32" />
       </footer>

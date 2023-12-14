@@ -23,7 +23,7 @@ const CardItem = ({
   img: React.ReactNode;
 }) => {
   return (
-    <div>
+    <div className="h-[400px]">
       <ScrollFadeIn>
         <Card className="shadow-xl dark:bg-white dark:text-black">
           <CardHeader>
