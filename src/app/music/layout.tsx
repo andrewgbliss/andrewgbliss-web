@@ -2,8 +2,8 @@ import "~/styles/globals.css";
 import { ThemeProvider } from "~/components/ui/theme-provider";
 
 export const metadata = {
-  title: "Portfolio",
-  description: "My website",
+  title: "Andrew G Bliss - Music",
+  description: "My music website",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 

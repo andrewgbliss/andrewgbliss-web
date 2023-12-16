@@ -65,7 +65,7 @@ export function TopBar({ options }: { options: WebsiteOptions }) {
             <SheetSide>
               <Button size="icon" variant="ghost">
                 <svg
-                  className="h-6 w-6"
+                  className="h-6 w-6 text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="6"
