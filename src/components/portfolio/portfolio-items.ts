@@ -79,4 +79,14 @@ export const portfolio_items = [
     },
     img_src: "/img/bid-calculator.png",
   },
+  {
+    title: "Music",
+    tagline: "Listen to the latest music.",
+    href: "/music",
+    badge: {
+      color: "bg-red-500",
+      text: "Development",
+    },
+    img_src: "/img/music.png",
+  },
 ];
