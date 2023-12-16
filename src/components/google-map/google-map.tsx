@@ -24,7 +24,7 @@ const MARKER_POSITION: google.maps.LatLngLiteral = {
 export function GoogleMapContainer() {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyAFnHN859aqLGKU_Gc2P5ltco8QpVpIOGU",
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY ?? "",
   });
 
   // const [map, setMap] = React.useState(null);
