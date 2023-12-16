@@ -89,4 +89,14 @@ export const portfolio_items = [
     },
     img_src: "/img/music.png",
   },
+  {
+    title: "Dashboard",
+    tagline: "View company analytics.",
+    href: "/dashboard",
+    badge: {
+      color: "bg-green-500",
+      text: "Company",
+    },
+    img_src: "/img/dashboard.png",
+  },
 ];
