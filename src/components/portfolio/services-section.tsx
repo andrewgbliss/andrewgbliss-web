@@ -40,22 +40,22 @@ const ServiceItem = ({
 }) => {
   return (
     <Card className="flex flex-col justify-between">
-      <CardHeader>
-        <CardTitle className="text-2xl">{title}</CardTitle>
-      </CardHeader>
-      <div className="mx-auto h-64 w-64 overflow-hidden">
+      <div className="mx-auto w-full overflow-hidden bg-cover">
         <Image
           alt={title}
-          className="w-full object-cover"
-          width="200"
+          className="h-full w-full rounded-xl"
+          width="400"
           height="300"
           src={img}
           sizes="(max-width: 768px) 100vw, 100vw"
           priority
         />
       </div>
+      <CardHeader>
+        <CardTitle className="text-2xl">{title}</CardTitle>
+      </CardHeader>
       <CardContent className="space-y-4 py-2">
-        <p className="text-lg">{description}</p>
+        <p className="h-16 overflow-hidden text-lg">{description}</p>
         <div>{badges}</div>
       </CardContent>
       <CardFooter className="pt-5">
@@ -172,9 +172,9 @@ export function ServicesSection() {
   return (
     <section className="min-h-screen bg-gradient-to-r from-gray-50 to-gray-100 py-12 pb-24  text-black dark:from-zinc-900 dark:to-zinc-800 dark:text-white">
       <div className="text-center">
-        <h2 className="text-5xl font-bold">Services</h2>
+        <h2 className="py-10 text-5xl font-bold">Services</h2>
       </div>
-      <div className="container relative mx-auto p-5">
+      <div className="container relative mx-auto min-h-screen py-5">
         <div className={`embla__services_full sm:embla__services_half`}>
           <div className={`embla__services__viewport`} ref={emblaRef}>
             <div className={`embla__services__container`}>

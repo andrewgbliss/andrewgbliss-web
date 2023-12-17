@@ -89,14 +89,15 @@
     --slide-spacing: 1rem;
     --slide-size: 50%;
     --slide-height: 19rem;
-    padding: 1.6rem;
+    /* padding: 1rem; */
   }
 
   .embla__services_full {
+    @apply p-2;
     --slide-spacing: 1rem;
     --slide-size: 100%;
     --slide-height: 19rem;
-    padding: 1.6rem;
+    /* padding: 1rem; */
   }
 
   .embla__services__viewport {
@@ -127,11 +128,10 @@
     margin: 0;
   }
   .embla__buttons {
+    @apply left-1/2 top-[90%] sm:top-full;
     display: flex;
     align-items: center;
     position: absolute;
-    top: 95%;
-    left: 50%;
     transform: translateX(-50%);
     /* left: 1.6rem; */
   }

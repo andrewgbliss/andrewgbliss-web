@@ -7,6 +7,7 @@ import { PricingSection } from "./pricing-section";
 import { ReturnUpButton } from "../ui/buttons/return-up-button";
 import { ServicesSection } from "./services-section";
 import { Footer } from "./footer";
+import { Testimonials } from "./testimonials";
 
 export function PortfolioSite({ options }: { options: WebsiteOptions }) {
   return (
@@ -20,10 +21,11 @@ export function PortfolioSite({ options }: { options: WebsiteOptions }) {
           }}
         ></div>
       </section> */}
-      <ServicesSection />
       <Newsletter />
       <TableOfContents />
 
+      <Testimonials />
+      <ServicesSection />
       <PricingSection />
 
       <section className="relative flex h-screen items-center justify-center">

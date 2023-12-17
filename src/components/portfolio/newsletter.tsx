@@ -2,14 +2,21 @@ import { HubspotForm } from "~/components/hubspot/hubspot-form";
 
 export function Newsletter() {
   return (
-    <div>
+    <div className=" bg-black">
       <hr />
-      <div className="flex w-full items-center justify-center bg-white py-12">
+      <div className="container mx-auto flex h-[500px] w-full items-center justify-center bg-white p-12">
         <div className=" bg-white  p-5">
           <div className="text-center">
-            <h2 className="text-5xl font-bold text-black">Newsletter</h2>
+            <h2 className="text-2xl font-bold text-black sm:pb-12 sm:text-5xl">
+              Stay Updated
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400">
+              Get the latest news and articles straight to your inbox. The
+              latest tech news is always changing, so let us keep you up to date
+              on the latest trends.
+            </p>
           </div>
-          <div className="h-64 w-72 py-5 sm:w-96">
+          <div className="flex h-64 w-full justify-center py-5">
             <HubspotForm
               region="na1"
               portalId="44484670"

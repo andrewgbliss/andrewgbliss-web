@@ -6,7 +6,7 @@ export function PricingSection() {
   return (
     <section
       id="pricing"
-      className="flex w-full items-center justify-center py-12"
+      className="flex min-h-screen w-full items-center justify-center py-12"
     >
       <div className="container px-4 md:px-6">
         <h2 className="pb-5 text-center text-5xl font-bold">Pricing</h2>

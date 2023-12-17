@@ -23,12 +23,12 @@ const CardItem = ({
   img: React.ReactNode;
 }) => {
   return (
-    <div className="h-[400px]">
+    <div className="h-[325px] sm:h-[400px]">
       <ScrollFadeIn>
         <Card className="shadow-xl dark:bg-white dark:text-black">
           <CardHeader>
             <div className="flex justify-between">
-              <CardTitle className="lg:text-2xl xl:text-3xl">
+              <CardTitle className="text-2xl xl:text-3xl">
                 <Link href={href} target="_blank">
                   {title}
                 </Link>
@@ -38,7 +38,7 @@ const CardItem = ({
             {badge}
           </CardHeader>
           <CardContent>
-            <div className="h-48 overflow-hidden">{img}</div>
+            <div className="overflow-hidden sm:h-48">{img}</div>
             <p className="pt-5 text-lg">{tagline}</p>
           </CardContent>
         </Card>
@@ -57,7 +57,7 @@ export function TableOfContents() {
       }}
     >
       {/* <div className="parallax absolute inset-0 bg-cover"></div> */}
-      <div className="grid gap-4 pb-24">
+      <div className="container mx-auto grid gap-4 pb-24">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {portfolio_items.map((item) => {
             return (

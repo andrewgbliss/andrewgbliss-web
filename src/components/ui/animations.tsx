@@ -86,6 +86,21 @@ export const FadeOut: React.FC<Props> = ({ children, ...rest }) => (
   </Fade>
 );
 
+export const ScrollFade: React.FC<Props> = ({ children, ...rest }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [show, setShow] = useState<boolean>(false);
+  useTriggerOnScroll(ref, (triggered: boolean) => {
+    setShow(triggered);
+  });
+  return (
+    <div ref={ref}>
+      <Fade show={show} {...rest}>
+        {children}
+      </Fade>
+    </div>
+  );
+};
+
 export const ScrollFadeIn: React.FC<Props> = ({ children, ...rest }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [show, setShow] = useState<boolean>(false);
