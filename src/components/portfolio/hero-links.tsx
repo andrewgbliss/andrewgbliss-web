@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
 } from "~/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
+import { scrollToElementById } from "~/lib/utils";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -16,18 +17,6 @@ declare global {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       "box-icon": any;
     }
-  }
-}
-
-function scrollToElementById(elementId: string) {
-  const element = document.getElementById(elementId);
-
-  if (element) {
-    element.scrollIntoView({
-      behavior: "smooth", // You can also use 'auto' or 'instant'
-      block: "start", // You can also use 'end' or 'center'
-      inline: "start", // You can also use 'end' or 'center'
-    });
   }
 }
 

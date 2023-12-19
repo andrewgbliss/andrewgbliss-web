@@ -10,6 +10,7 @@ import { AButton } from "../ui/buttons/a-button";
 import { SheetSide } from "../ecommerce/cart-sheet";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
+import { ModeToggle } from "../ui/mode-toggle";
 
 const Logo = ({ options }: { options: WebsiteOptions }) => {
   return (
@@ -61,6 +62,9 @@ export function TopBar({ options }: { options: WebsiteOptions }) {
         </div>
         <div className="flex">
           <HeroLinks />
+          <div className="p-3">
+            <ModeToggle />
+          </div>
           <div className="p-3">
             <SheetSide>
               <Button size="icon" variant="ghost">

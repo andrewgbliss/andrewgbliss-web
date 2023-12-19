@@ -1,9 +1,12 @@
+"use client";
+
 import { TopBar } from "~/components/portfolio/top-bar";
 import type { WebsiteOptions } from "./types";
-import { ModeToggle } from "../ui/mode-toggle";
 import Link from "next/link";
 import { BusinessCard } from "./cards/business-card";
 import { FadeIn } from "../ui/animations";
+import { DownButton } from "../ui/buttons/down-button";
+import { scrollToElementById } from "~/lib/utils";
 export function HeroSection({ options }: { options: WebsiteOptions }) {
   return (
     <section
@@ -26,7 +29,7 @@ export function HeroSection({ options }: { options: WebsiteOptions }) {
               tagline={options.tagline}
               description={options.description}
               top_left={
-                <></>
+                <div></div>
                 // <Link
                 //   className="hidden text-lg font-bold text-blue-500 sm:block"
                 //   href={"/"}
@@ -53,7 +56,11 @@ export function HeroSection({ options }: { options: WebsiteOptions }) {
                       </Link>
                     </div>
                     <div>
-                      <ModeToggle />
+                      <DownButton
+                        onClick={() => {
+                          scrollToElementById("portfolio");
+                        }}
+                      />
                     </div>
                   </div>
                 </div>

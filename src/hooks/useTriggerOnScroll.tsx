@@ -19,21 +19,25 @@ function getOffset(el: RefObject<HTMLDivElement> | undefined | null) {
   return { top: _y, left: _x };
 }
 
-function hasScrolledTo(el: RefObject<HTMLDivElement> | undefined | null) {
+function hasScrolledTo(
+  el: RefObject<HTMLDivElement> | undefined | null,
+  offsetScroll = 0,
+) {
   if (!el) return false;
   const top = getOffset(el).top;
   const offset = window.innerHeight / 2;
-  return top - offset <= window.pageYOffset;
+  return top - offset - offsetScroll <= window.pageYOffset;
 }
 
 export default function useTriggerOnScroll(
   el: RefObject<HTMLDivElement> | undefined | null,
   onTrigger: (value: boolean) => void,
+  offset = 0,
 ) {
   const [triggered, setTriggered] = useState<boolean>(false);
   useEffect(() => {
     function onScroll() {
-      const viewed = hasScrolledTo(el);
+      const viewed = hasScrolledTo(el, offset);
       if (viewed && !triggered) {
         window.removeEventListener("scroll", onScroll);
         setTriggered(true);
@@ -52,5 +56,5 @@ export default function useTriggerOnScroll(
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, [el, onTrigger, triggered]);
+  }, [el, onTrigger, triggered, offset]);
 }

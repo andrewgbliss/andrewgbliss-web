@@ -1,45 +1,43 @@
-import { FadeIn } from "../ui/animations";
-import { QrCard } from "../ui/cards/qr-card";
+"use client";
+
+import { Carousel } from "../carousel/carousel";
 import { portfolio_items } from "./portfolio-items";
+import { type EmblaOptionsType } from "embla-carousel-react";
+import Image from "next/image";
+import QRCode from "react-qr-code";
+
+const options: EmblaOptionsType = { axis: "y", loop: true, dragThreshold: 10 };
 
 export function TableOfContentsQrCodes() {
   return (
-    <section id="portfolio" className="container mx-auto w-full p-6 sm:p-12">
-      <div className="py-12 text-center">
-        <FadeIn wait={1000}>
-          <h2 className="text-5xl font-bold">Portfolio</h2>
-        </FadeIn>
-      </div>
-      <div className="grid gap-4 pb-24">
-        <div className="grid grid-cols-1 gap-8">
-          {portfolio_items.map((item) => (
-            <FadeIn key={item.title} wait={1500}>
-              <QrCard
-                title={item.title}
-                imgSrc={item.img_src}
-                tagline={item.tagline}
-                href={item.href}
+    <div className="">
+      <Carousel options={options}>
+        {portfolio_items.map((slide) => (
+          <div className="embla__slide" key={slide.title}>
+            <Image
+              alt={slide.title}
+              className="w-full object-cover object-center sm:h-full"
+              width="100"
+              height="100"
+              src={slide.img_src}
+              sizes="(max-width: 768px) 100vw, 100vw"
+              priority
+            />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform bg-white p-5 sm:bottom-0 sm:left-auto sm:right-0 sm:top-auto sm:transform-none">
+              <QRCode
+                size={256}
+                style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                value={
+                  slide.href.startsWith("/")
+                    ? `${process.env.NEXTAUTH_URL}${slide.href}`
+                    : slide.href
+                }
+                viewBox={`0 0 256 256`}
               />
-            </FadeIn>
-          ))}
-          {/* <FadeIn wait={2000}>
-            <QrCard
-              title="Zero Fall Studios"
-              imgSrc="/img/zero-fall-studios.png"
-              tagline="Dont Fall."
-              href="https://www.zerofallstudios.com"
-            />
-          </FadeIn>
-          <FadeIn wait={2500}>
-            <QrCard
-              title="Abybyo"
-              imgSrc="/img/abybyo-website.png"
-              tagline="Study Journal."
-              href="https://www.abybyo.com"
-            />
-          </FadeIn> */}
-        </div>
-      </div>
-    </section>
+            </div>
+          </div>
+        ))}
+      </Carousel>
+    </div>
   );
 }

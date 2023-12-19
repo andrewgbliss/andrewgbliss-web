@@ -14,6 +14,7 @@ type Props = {
   fadeOut?: boolean;
   opacity?: Array<string>;
   show?: boolean;
+  offsetScroll?: number;
 };
 
 const durations = new Map<number, string>();
@@ -104,9 +105,13 @@ export const ScrollFade: React.FC<Props> = ({ children, ...rest }) => {
 export const ScrollFadeIn: React.FC<Props> = ({ children, ...rest }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [show, setShow] = useState<boolean>(false);
-  useTriggerOnScroll(ref, (triggered: boolean) => {
-    setShow(triggered);
-  });
+  useTriggerOnScroll(
+    ref,
+    (triggered: boolean) => {
+      setShow(triggered);
+    },
+    rest.offsetScroll ?? 0,
+  );
   return (
     <div ref={ref}>
       <Fade show={show} {...rest}>

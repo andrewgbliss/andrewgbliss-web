@@ -62,10 +62,16 @@ const testimonials = [
 export function Testimonials() {
   const ref = useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(1);
+  const [showTile, setShowTitle] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(false);
-  useTriggerOnScroll(ref, (triggered: boolean) => {
-    setShow(triggered);
-  });
+  useTriggerOnScroll(
+    ref,
+    (triggered: boolean) => {
+      setShow(triggered);
+      setShowTitle(triggered);
+    },
+    200,
+  );
   const testimonial = testimonials[selectedIndex];
   const handleNext = () => {
     setShow(false);
@@ -79,9 +85,11 @@ export function Testimonials() {
     <section className="container mx-auto py-24">
       <div className="grid items-center justify-center gap-4 text-center">
         <div className="space-y-3">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            What our customers are saying
-          </h2>
+          <Fade show={showTile}>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              What our customers are saying
+            </h2>
+          </Fade>
         </div>
         <div className="h-[400px] w-full">
           <div ref={ref}>
