@@ -1,6 +1,5 @@
 import { PortfolioSite } from "~/components/portfolio/portfolio";
 import type { WebsiteOptions } from "~/components/portfolio/types";
-import { ThemeProvider } from "~/components/ui/theme-provider";
 
 const options: WebsiteOptions = {
   logo: {
@@ -12,19 +11,10 @@ const options: WebsiteOptions = {
   tagline: "Software Engineer",
   headline: "Andrew G Bliss",
   description:
-    "Professional with more than 15 plus years of software development. I have worked in a variety of industries including: healthcare, finance, and travel.",
+    "Professional with more than 15 plus years of software development in a variety of industries including: healthcare, finance, and travel.",
   website_url: "andrewgbliss.com",
 };
 
 export default function Page() {
-  return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <PortfolioSite options={options} />
-    </ThemeProvider>
-  );
+  return <PortfolioSite options={options} />;
 }

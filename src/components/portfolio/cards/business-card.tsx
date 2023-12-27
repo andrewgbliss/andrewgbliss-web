@@ -31,7 +31,7 @@ export const BusinessCard = ({
             {title}
           </h1>
           <p className="text-center text-xl sm:text-3xl">{tagline}</p>
-          <p className="text-lg sm:w-96 sm:text-xl">{description}</p>
+          <p className="text-lg sm:w-96 sm:text-lg">{description}</p>
         </div>
       </div>
       <hr />
