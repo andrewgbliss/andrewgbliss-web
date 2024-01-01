@@ -1,7 +1,5 @@
-<h2><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> I'm Andrew Bliss! <img src="https://media.giphy.com/media/12oufCB0MyZ1Go/giphy.gif" width="50"></h2>
-<img align='right' src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="230">
-<p><em>Senior Software Engineer<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
-</em></p>
+<h2>Andrew Bliss</h2>
+<p><em>Senior Software Engineer</em></p>
 
 [![Linkedin: andrewgbliss](https://img.shields.io/badge/-andrewgbliss-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrewgbliss/)](https://www.linkedin.com/in/andrewgbliss/)
 ![GitHub followers](https://img.shields.io/github/followers/andrewgbliss?label=Follow&style=social)
